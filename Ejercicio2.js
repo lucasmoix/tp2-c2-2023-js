@@ -38,14 +38,20 @@ function getVideos(str){
     }));
 }
 
+// function getTotalSegundos(videos, tipo){
+//   let total=0;
+//   videos
+//     .filter(video => video.type == tipo)
+//     .forEach(video => {
+//       total += video.min * 60 + video.seg;
+//     });
+//   return total;
+// }
+
 function getTotalSegundos(videos, tipo){
-  let total=0;
-  videos
+  return videos
     .filter(video => video.type == tipo)
-    .forEach(video => {
-      total += video.min * 60 + video.seg;
-    });
-  return total;
+    .reduce((acc, video) => acc + video.min * 60 + video.seg , 0);
 }
 
 console.log(
