@@ -18,11 +18,17 @@ function addUser(user){
 }
 
 function updateUser(user){
-
+    const users = getUsers();
+    const index = users.findIndex(userVar => userVar._id == user._id);
+    users[index] = user;
+    fs.writeFileSync(PATH_USERJSON, JSON.stringify(users, null, " "));
+    return getUser(user._id);
 }
 
 function deleteUser(id){
-
+    const users = getUsers();
+    users.splice( users.findIndex(user => user._id == id) , 1 );
+    fs.writeFileSync(PATH_USERJSON, JSON.stringify(users, null, " "));    
 }
 
 module.exports = {getUser, getUsers, addUser, updateUser, deleteUser}
