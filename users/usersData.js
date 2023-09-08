@@ -1,4 +1,5 @@
 const fs = require('fs'); // import con el type Module
+const bcrypt = require('bcrypt');
 const PATH_USERJSON = "../data/users.json";
 
 function getUsers(){
@@ -12,6 +13,8 @@ function getUser(id){
 function addUser(user){
     user._id = Date.now().toString(36) + Math.random().toString(36).substring(2);
     const users = getUsers();
+    user.password = bcrypt.hashSync(user.password, 10);
+    //bcrypt.compareSync('password', "password almacenado")
     users.push(user);    
     fs.writeFileSync(PATH_USERJSON, JSON.stringify(users, null, " "));
     return getUser(user._id);

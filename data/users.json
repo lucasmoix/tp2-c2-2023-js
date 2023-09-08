@@ -1108,5 +1108,11 @@
   "email": "pablo.hinojosa@ort.edu.ar",
   "password": "123",
   "_id": "ksxwigysk4qb5fgomub"
+ },
+ {
+  "name": "Steve Jobs",
+  "email": "Steve@fakegmail.com",
+  "password": "$2b$10$m4mrNoMSVGsOSJGBK52xBeeF3f03zsOPTfMfcgSawvfkDEYFfQI42",
+  "_id": "lm9tywkbwl029aawcvg"
  }
 ]
