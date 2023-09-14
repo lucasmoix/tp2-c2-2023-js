@@ -11,6 +11,7 @@ fs.readFile(PATH_USERJSON, "utf-8", (err, data)=>{
 
 console.log('Termino de leer el archivo???');
 
+
 // TODO: Utilizando el modelo asyn de lectura de archivos:
 // Leer el json users.json
 // Insertar un user
