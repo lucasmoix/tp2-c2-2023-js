@@ -54,7 +54,13 @@
   "year": 1899
  },
  {
-  "_id": 100,
+  "_id": 110,
+  "first": "Juan",
+  "last": "Peres",
+  "year": 1879
+ },
+ {
+  "_id": 110,
   "first": "Juan",
   "last": "Peres",
   "year": 1879

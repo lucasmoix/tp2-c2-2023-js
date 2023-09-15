@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import fs from 'fs';
 
 const PATH_INVENTORJSON = '../data/inventors.json';
